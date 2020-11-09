@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  urlAPI: 'https://dev.inow.fr/formation/api/v1/'
 };
