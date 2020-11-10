@@ -19,7 +19,7 @@ export class ListCarPage implements OnInit {
   constructor(private _servCar: CarService, private _router: Router) { }
 
   ngOnInit(): void {
-
+    console.log("test");
   }
 
   onAdd(): void {

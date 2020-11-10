@@ -1,0 +1,17 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "ionic1120",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {},
+  "server": {
+    "url": "http://192.168.1.13:8100",
+    "cleartext": true
+  }
+}
