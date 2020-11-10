@@ -1,9 +1,44 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>addCar</ion-title>
+    <ion-title>Nouvelle voiture</ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="onSave()">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <form [formGroup]="formCar">
+    <ion-list>
+      <ion-item>
+        <ion-label>Model:</ion-label>
+        <ion-input type="text" formControlName="model"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Prix:</ion-label>
+        <ion-input type="number" formControlName="price"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Model:</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" formControlName="dateOfCirculation">
+        </ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Marque:</ion-label>
+        <ion-select placeholder="Sélectionner" formControlName="markID">
+          <ion-select-option *ngFor="let mark of ($marks | async)" [value]="mark.id">
+            {{mark.name}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
 
+  </form>
 </ion-content>
