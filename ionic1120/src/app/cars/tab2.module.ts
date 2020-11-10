@@ -9,6 +9,8 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { Tab2PageRoutingModule } from './tab2-routing.module';
 import { AddCarPage } from './add-car/add-car.page';
 import { ListCarPage } from './list-car/list-car.page';
+import { CarService } from '../services/car.service';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   imports: [
@@ -22,6 +24,10 @@ import { ListCarPage } from './list-car/list-car.page';
   declarations: [
     ListCarPage,
     AddCarPage
+  ],
+  providers: [
+    CarService
+    //{provide: CarService, useClass: environment.production? CarService : MockCarService}
   ]
 })
 export class Tab2PageModule { }

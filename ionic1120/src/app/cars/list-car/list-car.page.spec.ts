@@ -8,10 +8,12 @@ describe('Tab2Page', () => {
   let component: ListCarPage;
   let fixture: ComponentFixture<ListCarPage>;
 
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ListCarPage],
-      imports: [IonicModule.forRoot(), ExploreContainerComponentModule]
+      imports: [IonicModule.forRoot(), ExploreContainerComponentModule],
+      //providers: [MockCarService]
     }).compileComponents();
 
     fixture = TestBed.createComponent(ListCarPage);

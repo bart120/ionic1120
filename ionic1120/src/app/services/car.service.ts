@@ -4,9 +4,7 @@ import { Observable } from 'rxjs';
 import { CarModel } from '../models/car.model';
 import { environment } from 'src/environments/environment';
 
-@Injectable({
-    providedIn: 'root'
-})
+@Injectable()
 export class CarService {
     constructor(private _http: HttpClient) { }
 
